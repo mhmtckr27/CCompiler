@@ -1,0 +1,23 @@
+PROCEDURE karsilastir(string1_cp, string2_cp)
+BEGIN
+	t_cp <- strcmp( string1_cp, string2_cp)
+	RETURN t_cp
+END
+PROCEDURE MAIN()
+BEGIN
+	PRINT_LINE “Ilk stringi giriniz:” 
+	str1_cp <- ( char *) malloc ( 100)
+	str2_cp <- ( char *) malloc ( 100)
+	GET_VAL “$str1_cp”
+	PRINT_LINE “Ikinci stringi giriniz:”
+	GET_VAL “$str2_cp”
+	a_cp <- karsilastir( str1_cp, str2_cp)
+	IF ( a_cp EQUAL 0 ) THEN
+	BEGIN
+		PRINT_LINE “Bu stringler esit”
+	END
+	IF ( a_cp NOT_EQUAL 0) THEN
+	BEGIN
+		PRINT_LINE “Bu stringler esit degil”
+	END
+END

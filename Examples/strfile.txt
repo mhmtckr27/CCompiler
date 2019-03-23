@@ -1,0 +1,18 @@
+PROCEDURE MAIN()
+BEGIN
+	dosyaac_file <- fopen( "dosya1.txt", "r")
+	dosyaac2_file <- fopen( "dosya2.txt", "r")
+	str1_cp <- ( char *) malloc ( 100)
+	str2_cp <- ( char *) malloc ( 100)
+	fgets( str1_cp, 100, dosyaac_file)
+	fgets( str2_cp, 100, dosyaac2_file)
+	a_cp <- strcmp( str1_cp, str2_cp)
+	IF ( a_cp EQUAL 0 ) THEN
+	BEGIN
+		PRINT_LINE “Bu stringler esit”
+	END
+	IF ( a_cp NOT_EQUAL 0) THEN
+	BEGIN
+		PRINT_LINE “Bu stringler esit degil”
+	END
+END

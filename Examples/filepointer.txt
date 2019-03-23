@@ -1,0 +1,9 @@
+PROCEDURE MAIN()
+BEGIN
+	dosyaac_file <- fopen( "dosyaislemleri.txt", "w")
+	PRINT_LINE "KAC ADET HARF GIRILECEK"
+	GET_VAL "$n_i"
+	PRINT_LINE "LUTFEN METNI GIRINIZ"
+	GET_VAL "$yaz_cp"
+	fputs( yaz, dosyaac_file)
+END

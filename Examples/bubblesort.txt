@@ -1,0 +1,35 @@
+PROCEDURE MAIN()
+BEGIN
+	PRINT_LINE "Dizinin eleman sayisini giriniz"
+	GET_VAL "$n_i"
+	bubble( n_i)
+END
+PROCEDURE bubble(n_i)
+BEGIN
+	PRINT_LINE "Dizinin elemanlarini giriniz"
+	FOR k_i <- 0..n_i LOOP
+	BEGIN
+		GET_VAL "$arr_i[k_i]"
+	END
+	PRINT_LINE "Sirali Dizi:"
+	i_i <- 0
+	WHILE ( ( i_i ) < ( n_i - 1 ) ) DO
+	BEGIN
+		j_i <- 0
+		WHILE ( ( j_i ) NOT_EQUAL ( n_i - i_i - 1 ) ) DO
+		BEGIN
+			IF ( arr_i[j_i] > arr_i[j_i,+,1] ) THEN
+			BEGIN
+				temp_i <- arr_i[j_i]
+				arr_i[j_i] <- arr_i[j_i,+,1]
+				arr_i[j_i,+,1] <- temp_i
+			END
+			j_i <- j_i + 1
+		END
+		i_i = i_i + 1
+	END
+	FOR k_i <- 0..n_i LOOP
+	BEGIN
+		PRINT_LINE "$arr_i[k_i]"
+	END
+END
